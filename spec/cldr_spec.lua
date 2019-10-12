@@ -1,3 +1,6 @@
+-- External dependencies
+local Set = require("pl.Set")
+
 -- Internal modules
 local CLDR = require("cldr")
 
@@ -8,7 +11,7 @@ describe('cldr', function ()
   end)
 
   it('should have a bunch of locales', function ()
-    assert.equal(542, #CLDR.locales)
+    assert.equal(542, Set.len(CLDR.locales))
   end)
 
   it('should have truthy set accessors to locales', function ()
