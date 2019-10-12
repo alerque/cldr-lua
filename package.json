@@ -1,0 +1,21 @@
+{
+  "name": "cldr-lua",
+  "version": "0.0.0",
+  "description": "Unicode CLDR data and Lua interface.",
+  "dependencies": {
+    "cldr-core": "^36.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alerque/cldr-lua.git"
+  },
+  "author": "Caleb Maclennan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alerque/cldr-lua/issues"
+  },
+  "homepage": "https://github.com/alerque/cldr-lua#readme"
+}
