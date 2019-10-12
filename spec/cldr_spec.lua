@@ -7,4 +7,8 @@ describe('cldr', function ()
     assert.is_true(type(CLDR) == "table")
   end)
 
+  it('should have a bunch of locales', function ()
+    assert.equal(542, #CLDR.locales)
+  end)
+
 end)
