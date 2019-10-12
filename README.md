@@ -71,12 +71,21 @@ All included data is based on CLDL [v36.0][v36].
 
 Definitions, aliases, and validity information for Unicode
 
-* [ ] locales
+* [x] locales
 * [ ] languages
 * [ ] scripts
 * [ ] regions
 * [ ] extensions
 * [ ] …
+
+## Usage
+
+```lua
+local CLDR = require("cldr")
+
+-- Table (pl.Set) of all available locales
+CLDR.locales
+```
 
 ## Other Formats
 
