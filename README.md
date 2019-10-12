@@ -1,9 +1,9 @@
 # CLDR Lua
 
-[![Luacheck](https://github.com/alerque/cldr/workflows/Luacheck/badge.svg)](https://github.com/alerque/cldr/actions)
-[![Busted](https://github.com/alerque/cldr/workflows/Busted/badge.svg)](https://github.com/alerque/cldr/actions)
-[![Coverage Status](https://coveralls.io/repos/github/alerque/cldr/badge.svg?branch=master)](https://coveralls.io/github/alerque/cldr?branch=master)
-[![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/alerque/cldr)](https://github.com/alerque/cldr/releases)
+[![Luacheck](https://github.com/alerque/cldr-lua/workflows/Luacheck/badge.svg)](https://github.com/alerque/cldr-lua/actions)
+[![Busted](https://github.com/alerque/cldr-lua/workflows/Busted/badge.svg)](https://github.com/alerque/cldr-lua/actions)
+[![Coverage Status](https://coveralls.io/repos/github/alerque/cldr-lua/badge.svg?branch=master)](https://coveralls.io/github/alerque/cldr-lua?branch=master)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/alerque/cldr-lua)](https://github.com/alerque/cldr-lua/releases)
 [![LuaRocks](https://img.shields.io/luarocks/v/alerque/cldr)](https://luarocks.org/modules/alerque/cldr)
 
 Unicode CLDR (Common Locale Data Repository) data and Lua interface.
