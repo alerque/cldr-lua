@@ -87,6 +87,12 @@ local CLDR = require("cldr")
 CLDR.locales
 ```
 
+## Status
+
+### 0.0.0
+
+Setup basic tooling, added data for full list of locales, and made an inteface to fetch it.
+
 ## Other Formats
 
 The CLDR data is [provided upstream][cldr-gh] in LDML format (XML based). A [JSON dump][cldr-json] is also available.
