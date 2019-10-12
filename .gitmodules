@@ -1,0 +1,4 @@
+[submodule "unicode-cldr"]
+	path = unicode-cldr
+	url = git@github.com:unicode-org/cldr.git
+	branch = maint/maint-36
