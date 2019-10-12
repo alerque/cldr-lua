@@ -88,8 +88,9 @@ The Lua interfaces and code in this project are licensed under the MIT license.
 
 All data provided by the [Unicode Consortium][uc] is licensed under the [Unicode License][ul] (also referred to as the [ICU License][icul]).
 
- [cldr]: http://cldr.unicode.org/
  [cldr-gh]: https://github.com/unicode-org/cldr
+ [cldr-json]: https://github.com/unicode-cldr/cldr-json
+ [cldr]: http://cldr.unicode.org
  [icul]: https://github.com/unicode-org/cldr/blob/master/ICU-LICENSE
  [uc]: https://unicode.org/main.html
  [ul]: https://www.unicode.org/copyright.html

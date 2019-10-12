@@ -7,15 +7,13 @@ source = {
 
 description = {
    summary = "Unicode CLDR data and Lua interface.",
-   detailed = [[Collection of useful bits of the *Unicode Common Locale Data Repository* wrapped in a Lua interface.]],
+   detailed = [[Unicode CLDR (Common Locale Data Repository) data and Lua interface.]],
    homepage = "https://github.com/alerque/cldr-lua",
    license = "MIT/ICU"
 }
 
 dependencies = {
-   "lua",
-   "luaepnf",
-   "penlight"
+   "lua"
 }
 
 build = {
