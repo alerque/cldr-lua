@@ -22,7 +22,7 @@ jobs:
       uses: leafo/gh-actions-luarocks@v3
     - name: Setup dependencies
       run: |
-        luarocks install --only-deps cldr-scm-0.rockspec
+        luarocks install --only-deps cldr-dev-0.rockspec
         luarocks install busted
         luarocks install penlight
         luarocks install https://raw.githubusercontent.com/moteus/luacov-coveralls/master/rockspecs/luacov-coveralls-scm-0.rockspec

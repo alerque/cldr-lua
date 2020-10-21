@@ -1,6 +1,6 @@
 rockspec_format = "3.0"
 package = "cldr"
-version = "scm-0"
+version = "dev-0"
 
 source = {
    url = "git://github.com/alerque/cldr-lua.git",
