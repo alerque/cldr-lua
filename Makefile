@@ -38,19 +38,24 @@ install:
 define rockpec_template =
 	sed -e "s/@SEMVER@/$(SEMVER)/g" \
 		-e "s/@ROCKREV@/$(ROCKREV)/g" \
+		-e "s/@SPECVER@/$(SPECVER)/g" \
 		-e "s/@TAG@/$(TAG)/g" \
-		$< > $@
+		$<
 endef
 
 $(SCM_ROCK): SEMVER = dev
 $(SCM_ROCK): TAG = master
+$(SCM_ROCK): SPECVER = 3.0
 $(SCM_ROCK): $(PACKAGE).rockspec.in
-	$(rockpec_template)
+	$(rockpec_template) |
+		grep -vE '(tag) =' > $@
 
 rockspecs/$(PACKAGE)-%-0.rockspec: SEMVER = $*
 rockspecs/$(PACKAGE)-%-0.rockspec: TAG = v$*
+rockspecs/$(PACKAGE)-%-0.rockspec: SPECVER = 1.0
 rockspecs/$(PACKAGE)-%-0.rockspec: $(PACKAGE).rockspec.in
-	$(rockpec_template)
+	$(rockpec_template) |
+		grep -vE '(issues_url|branch|labels) =' > $@
 
 $(PACKAGE)-dev-0.src.rock: $(SCM_ROCK)
 	luarocks $(LUAROCKS_ARGS) pack $<

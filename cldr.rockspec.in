@@ -1,10 +1,12 @@
-rockspec_format = "3.0"
+rockspec_format = "@SPECVER@"
 package = "cldr"
 version = "@SEMVER@-@ROCKREV@"
 
 source = {
    url = "git://github.com/alerque/cldr-lua.git",
-   tag = "@TAG@"
+   branch = "master",
+   tag = "@TAG@",
+   dir = "cldr-lua"
 }
 
 description = {
@@ -20,7 +22,7 @@ description = {
 }
 
 dependencies = {
-   "lua",
+   "lua >= 5.1",
    "penlight"
 }
 

@@ -4,7 +4,8 @@ version = "dev-0"
 
 source = {
    url = "git://github.com/alerque/cldr-lua.git",
-   tag = "master"
+   branch = "master",
+   dir = "cldr-lua"
 }
 
 description = {
