@@ -20,7 +20,7 @@ description = {
 }
 
 dependencies = {
-   "lua",
+   "lua >= 5.1",
    "penlight"
 }
 
