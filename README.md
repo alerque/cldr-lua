@@ -18,7 +18,7 @@ From the [CLDR][cldr] website:
 
 For now, data and interfaces will be added on an as-needed basis. Here is a basic rundown of the data available upstream vs. what this library currently provides.
 
-All included data is based on CLDL [v36.0][v36].
+All included data is based on CLDR [v36.0][v36].
 
 ### Locale-specific patterns for formatting and parsing:
 
@@ -89,9 +89,13 @@ CLDR.locales
 
 ## Status
 
-### 0.0.0
+### v0.1.0
 
-Setup basic tooling, added data for full list of locales, and made an inteface to fetch it.
+Make it easier to install using older LuaRocks versions, expand to Lua 5.4.
+
+### v0.0.0
+
+Setup basic tooling, added data for full list of locales, and made an interface to fetch it.
 
 ## Other Formats
 
