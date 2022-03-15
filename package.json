@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Unicode CLDR data and Lua interface.",
   "dependencies": {
-    "cldr-core": "^36.0.0"
+    "cldr-core": "^40.0.0"
   },
   "devDependencies": {},
   "scripts": {
