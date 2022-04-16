@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file. See [conven
 """
 body = """
 {% if version %}\
-    ## [{{ version }}](https://github.com/alerque/fluent-lua/releases/{{ version }}) — {{ timestamp | date(format="%Y-%m-%d") }}
+    ## [{{ version }}](https://github.com/alerque/cldr-lua/releases/{{ version }}) — {{ timestamp | date(format="%Y-%m-%d") }}
 {% else %}\
     ## [unreleased]
 {% endif %}\

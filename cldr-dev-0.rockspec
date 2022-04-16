@@ -3,7 +3,7 @@ package = "cldr"
 version = "dev-0"
 
 source = {
-   url = "git+https://github.com/alerque/cldrluent-lua.git",
+   url = "git+https://github.com/alerque/cldr-lua.git",
    tag = "master"
 }
 
