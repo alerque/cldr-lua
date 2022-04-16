@@ -92,6 +92,7 @@ CLDR.locales
 ### unreleased
 
 Refresh based on Unicode CLDR 41 data.
+Use full data set instead of only modern locales mentioned in core.
 
 ### v0.1.0
 
