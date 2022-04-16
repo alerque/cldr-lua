@@ -1,9 +1,6 @@
 name: Deploy
 
-on:
-  push:
-    paths:
-      - rockspecs/*.rockspec
+on: [ push, workflow_dispatch ]
 
 jobs:
 

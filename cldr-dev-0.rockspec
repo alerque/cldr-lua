@@ -29,3 +29,4 @@ build = {
       ["cldr.data.locales"] = "cldr/data/locales.lua"
    }
 }
+-- republish
