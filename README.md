@@ -89,6 +89,10 @@ CLDR.locales
 
 ## Status
 
+### unreleased
+
+Refresh based on Unicode CLDR 41 data.
+
 ### v0.1.0
 
 Make it easier to install using older LuaRocks versions, expand to Lua 5.4.
