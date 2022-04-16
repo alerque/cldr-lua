@@ -1,19 +1,15 @@
-rockspec_format = "@SPECVER@"
+rockspec_format = "3.0"
 package = "cldr"
 version = "@SEMVER@-@ROCKREV@"
 
 source = {
-   url = "git://github.com/alerque/cldr-lua.git",
-   branch = "master",
-   tag = "@TAG@",
-   dir = "cldr-lua"
+   url = "git+https://github.com/alerque/cldrluent-lua.git",
+   tag = "@TAG@"
 }
 
 description = {
-   summary = "Unicode CLDR data and Lua interface",
-   detailed = [[
-     Unicode CLDR (Common Locale Data Repository) data and Lua interface.
-   ]],
+   summary = "Lua interface to Unicode CLDR data",
+   detailed = [[Unicode CLDR (Common Locale Data Repository) data and Lua interface.]],
    license = "MIT/ICU",
    homepage = "https://github.com/alerque/cldr-lua",
    issues_url = "https://github.com/alerque/cldr-lua/issues",
@@ -30,6 +26,6 @@ build = {
    type = "builtin",
    modules = {
       ["cldr.init"] = "cldr/init.lua",
-      ["cldr.data.locales"] = "cldr/data/locales.lua",
+      ["cldr.data.locales"] = "cldr/data/locales.lua"
    }
 }

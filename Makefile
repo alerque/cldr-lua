@@ -10,10 +10,13 @@ SHELL := zsh
 .DELETE_ON_ERROR:
 .SUFFIXES:
 
+JOBS ?= $(shell nproc 2>- || sysctl -n hw.ncpu 2>- || echo 1)
+MAKEFLAGS += -j$(JOBS) -Otarget
+
 VERSION != git describe --tags --all --abbrev=7 | sed 's/-/-r/'
 SEMVER != git describe --tags | sed 's/^v//;s/-.*//'
 ROCKREV = 0
-TAG = v$(SEMVER)
+TAG ?= v$(SEMVER)
 
 LUAROCKS_ARGS ?= --local --tree lua_modules
 
@@ -35,24 +38,26 @@ install:
 define rockpec_template =
 	sed -e "s/@SEMVER@/$(SEMVER)/g" \
 		-e "s/@ROCKREV@/$(ROCKREV)/g" \
-		-e "s/@SPECVER@/$(SPECVER)/g" \
 		-e "s/@TAG@/$(TAG)/g" \
-		$<
+		$< > $@
 endef
 
 $(SCM_ROCK): SEMVER = dev
 $(SCM_ROCK): TAG = master
-$(SCM_ROCK): SPECVER = 3.0
 $(SCM_ROCK): $(PACKAGE).rockspec.in
-	$(rockpec_template) |
-		grep -vE '(tag) =' > $@
+	$(rockpec_template)
 
 rockspecs/$(PACKAGE)-%-0.rockspec: SEMVER = $*
 rockspecs/$(PACKAGE)-%-0.rockspec: TAG = v$*
-rockspecs/$(PACKAGE)-%-0.rockspec: SPECVER = 1.0
 rockspecs/$(PACKAGE)-%-0.rockspec: $(PACKAGE).rockspec.in
-	$(rockpec_template) |
-		grep -vE '(issues_url|branch|labels) =' > $@
+	$(rockpec_template)
+	sed -i \
+		-e '/rockspec_format/s/3.0/1.0/' \
+		-e '/url = "git/a\   dir = "cldr-lua",' \
+		-e '/issues_url/d' \
+		-e '/maintainer/d' \
+		-e '/labels/d' \
+		$@
 
 $(PACKAGE)-dev-0.src.rock: $(SCM_ROCK)
 	luarocks $(LUAROCKS_ARGS) pack $<
@@ -67,6 +72,12 @@ check:
 .PHONY: test
 test:
 	busted
+
+.PHONY: release
+release: CHANGELOG.md rockspecs/cldr-$(SEMVER)-$(ROCKREV).rockspec
+	git add $^
+	git commit -m "chore(release): $(SEMVER)"
+	git tag $(TAG)
 
 .PHONY: build_tools
 build_tools:
