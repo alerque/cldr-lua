@@ -12,4 +12,3 @@ files["spec"] = {
 	std = "+busted"
 }
 max_line_length = false
--- vim: ft=lua
