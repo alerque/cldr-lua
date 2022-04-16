@@ -11,12 +11,6 @@ local function filetostring (fname)
 end
 
 local inputfile = arg[1]
-local input = dkjson.decode(filetostring(inputfile))
+local data = dkjson.decode(filetostring(inputfile))
 
-local i = 2
-while i <= #arg do
-  input = input[arg[i]]
-  i = i + 1
-end
-
-print(serpent.dump(input, { indent = "  "}))
+print(serpent.dump(data, { indent = "  "}))

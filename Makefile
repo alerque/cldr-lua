@@ -76,8 +76,9 @@ build_tools:
 .PHONY: data
 data: cldr/data/locales.lua
 
-cldr/data/locales.lua: node_modules/cldr-core/availableLocales.json
-	./json2table.lua $< availableLocales full > $@
+cldr/data/locales.lua: node_modules/cldr-localenames-full/main/en/languages.json
+	jq '.main.en.localeDisplayNames.languages | keys' $< |
+		./json2table.lua /dev/stdin > $@
 
 .PHONY: force
 force:;
