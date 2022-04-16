@@ -86,21 +86,9 @@ local CLDR = require("cldr")
 -- Table (pl.Set) of all available locales
 CLDR.locales
 ```
+## Changelog
 
-## Status
-
-### unreleased
-
-Refresh based on Unicode CLDR 41 data.
-Use full data set instead of only modern locales mentioned in core.
-
-### v0.1.0
-
-Make it easier to install using older LuaRocks versions, expand to Lua 5.4.
-
-### v0.0.0
-
-Setup basic tooling, added data for full list of locales, and made an interface to fetch it.
+Please see [CHANGELOG.md](./CHANGELOG.md).
 
 ## Other Formats
 
