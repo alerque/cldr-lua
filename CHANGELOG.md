@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org) for commit guidelines.
 
-## unreleased
+## [v0.2.0](https://github.com/alerque/cldr-lua/releases/v0.1.0) — 2022-04-16
 
 * Refresh based on Unicode CLDR 41 data
 * Use full data set instead of only modern locales mentioned in core

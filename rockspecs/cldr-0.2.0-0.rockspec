@@ -1,10 +1,11 @@
-rockspec_format = "3.0"
+rockspec_format = "1.0"
 package = "cldr"
-version = "dev-0"
+version = "0.2.0-0"
 
 source = {
    url = "git+https://github.com/alerque/cldr-lua.git",
-   tag = "master"
+   dir = "cldr-lua",
+   tag = "v0.2.0"
 }
 
 description = {
@@ -12,9 +13,6 @@ description = {
    detailed = [[Unicode CLDR (Common Locale Data Repository) data and Lua interface.]],
    license = "MIT/ICU",
    homepage = "https://github.com/alerque/cldr-lua",
-   issues_url = "https://github.com/alerque/cldr-lua/issues",
-   maintainer = "Caleb Maclennan <caleb@alerque.com>",
-   labels = { "i18n", "unicode" }
 }
 
 dependencies = {
