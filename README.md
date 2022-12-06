@@ -18,7 +18,7 @@ From the [CLDR][cldr] website:
 
 For now, data and interfaces will be added on an as-needed basis. Here is a basic rundown of the data available upstream vs. what this library currently provides.
 
-All included data is based on CLDR [v36.0][v36].
+All included data is based on Unicode's [CLDR 42][v42] data set.
 
 ### Locale-specific patterns for formatting and parsing:
 
@@ -105,4 +105,4 @@ All CLDR data provided by the [Unicode Consortium][uc] is governed by the [Unico
  [cldr]: http://cldr.unicode.org
  [uc]: https://unicode.org/main.html
  [utou]: https://www.unicode.org/copyright.html
- [v36]: http://cldr.unicode.org/index/downloads/cldr-36
+ [v36]: http://cldr.unicode.org/index/downloads/cldr-42
