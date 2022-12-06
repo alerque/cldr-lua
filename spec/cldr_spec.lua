@@ -11,7 +11,7 @@ describe('cldr', function ()
   end)
 
   it('should have a bunch of locales', function ()
-    assert.equal(674, Set.len(CLDR.locales))
+    assert.equal(681, Set.len(CLDR.locales))
   end)
 
   it('should have truthy set accessors to locales', function ()
