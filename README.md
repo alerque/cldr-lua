@@ -98,12 +98,11 @@ The CLDR data is [provided upstream][cldr-gh] in LDML format (XML based). A [JSO
 
 The Lua interfaces and code in this project are licensed under the MIT license.
 
-All data provided by the [Unicode Consortium][uc] is licensed under the [Unicode License][ul] (also referred to as the [ICU License][icul]).
+All CLDR data provided by the [Unicode Consortium][uc] is governed by the [Unicode Terms of Use][utou].
 
  [cldr-gh]: https://github.com/unicode-org/cldr
  [cldr-json]: https://github.com/unicode-cldr/cldr-json
  [cldr]: http://cldr.unicode.org
- [icul]: https://github.com/unicode-org/cldr/blob/master/ICU-LICENSE
  [uc]: https://unicode.org/main.html
- [ul]: https://www.unicode.org/copyright.html
+ [utou]: https://www.unicode.org/copyright.html
  [v36]: http://cldr.unicode.org/index/downloads/cldr-36
