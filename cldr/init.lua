@@ -5,14 +5,14 @@ local Set = require("pl.Set")
 local CLDR = {}
 
 setmetatable(CLDR, {
-    __index = function (self, key)
+   __index = function (self, key)
       local data = require("cldr.data." .. key)
       if key == "locales" then
-        data = Set(data)
+         data = Set(data)
       end
       self[key] = data
       return self[key]
-    end
-  })
+   end,
+})
 
 return CLDR

@@ -4,7 +4,7 @@ version = "dev-0"
 
 source = {
    url = "git+https://github.com/alerque/cldr-lua.git",
-   branch = "master"
+   branch = "master",
 }
 
 description = {
@@ -14,18 +14,18 @@ description = {
    homepage = "https://github.com/alerque/cldr-lua",
    issues_url = "https://github.com/alerque/cldr-lua/issues",
    maintainer = "Caleb Maclennan <caleb@alerque.com>",
-   labels = { "i18n", "unicode" }
+   labels = { "i18n", "unicode" },
 }
 
 dependencies = {
    "lua >= 5.1",
-   "penlight"
+   "penlight",
 }
 
 build = {
    type = "builtin",
    modules = {
       ["cldr.init"] = "cldr/init.lua",
-      ["cldr.data.locales"] = "cldr/data/locales.lua"
-   }
+      ["cldr.data.locales"] = "cldr/data/locales.lua",
+   },
 }
